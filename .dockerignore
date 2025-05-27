@@ -1,0 +1,36 @@
+# Git and env
+.git
+.env
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.egg-info/
+dist/
+build/
+env/
+venv/
+
+# Django stuff
+db.sqlite3
+*.log
+*.pid
+migrations/
+/media
+/static
+staticfiles/
+/frontend
+
+# Hugging Face cache
+hf_cache/
+
+# Your dev-only files
+aws_KC_links.json
+files.py
+get_aws_docs.py
+page.html
+temp.ipynb
+vector_store_creation.py

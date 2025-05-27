@@ -1,0 +1,64 @@
+# --- General ---
+.env
+*.env
+*.log
+*.pyc
+__pycache__/
+*.sqlite3
+.DS_Store
+*.bak
+
+# --- Python ---
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+VENV/
+virtualenv/
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-log.txt
+htmlcov/
+coverage.xml
+.cache/
+.pytest_cache/
+.mypy_cache/
+.tox/
+celerybeat-schedule
+instance/
+.pyre/
+
+# Django specific
+staticfiles/
+local_settings.py
+db.sqlite3
+media/
+
+# Backend Files
+files.py
+awsdocsdata/
+
+
+# Flask specific
+instance/
+.webassets-cache
+
+# --- React / Node ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+build/
+dist/
+.cache/
+.eslintcache
+
+# Optional: VSCode settings (if used)
+.vscode/
