@@ -11,7 +11,7 @@ try:
     logger.info("Initializing Asknimbus chatbot")
     chat_backend = AwsChatHandler()
 except Exception as e:
-    logger.error(f"Failed to initialize ChatModelPortfolio: {str(e)}")
+    logger.error(f"Failed to initialize AskNimbus Chat: {str(e)}")
     chat_backend = None
 
 
@@ -21,17 +21,17 @@ def healthcheck(request: HttpRequest) -> JsonResponse:
     """
     try:
         if chat_backend is None:
-            logger.warning("Chat backend is not initialized")
+            logger.warning("AskNimbus Chatbot is not initialized")
             return JsonResponse(
-                {"message": "Chatbot is not ready"},
+                {"message": "AskNimbus Chatbot is not ready"},
                 status=status.HTTP_503_SERVICE_UNAVAILABLE
             )
         return JsonResponse(
-            {"message": "Chatbot is ready"},
+            {"message": "AskNimbus Chatbot is ready"},
             status=status.HTTP_200_OK
         )
     except Exception as e:
-        logger.error(f"Error in chat health check: {str(e)}")
+        logger.error(f"Error in AskNimbus chatbot health check: {str(e)}")
         return JsonResponse(
             {"error": "Internal server error"},
             status=status.HTTP_500_INTERNAL_SERVER_ERROR
@@ -54,9 +54,9 @@ def chat(request: HttpRequest) -> JsonResponse:
             )
 
         if chat_backend is None:
-            logger.error("Chat backend not available")
+            logger.error("AskNimbus ChatBot not available")
             return JsonResponse(
-                {"error": "Chat service unavailable"},
+                {"error": "AskNimbus ChatBot service unavailable"},
                 status=status.HTTP_503_SERVICE_UNAVAILABLE
             )
 
