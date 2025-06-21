@@ -44,6 +44,7 @@ class AwsChatHandler():
         return session_id
 
     def get_session_history(self, session_id: str) -> ChatMessageHistory:
+        # Use Upstash Redis to store/retrieve history as a list
         history_key = f"chat_history:{session_id}"
         chat_history = ChatMessageHistory()
         try:
